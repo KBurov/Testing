@@ -1,0 +1,156 @@
+﻿<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+    <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+        <Author>Konstantin Burov</Author>
+        <LastAuthor>Konstantin Burov</LastAuthor>
+        <Created>2012-07-20T19:17:32Z</Created>
+        <Version>14.00</Version>
+    </DocumentProperties>
+    <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+        <AllowPNG/>
+    </OfficeDocumentSettings>
+    <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+        <WindowHeight>12150</WindowHeight>
+        <WindowWidth>24780</WindowWidth>
+        <WindowTopX>240</WindowTopX>
+        <WindowTopY>75</WindowTopY>
+        <ProtectStructure>False</ProtectStructure>
+        <ProtectWindows>False</ProtectWindows>
+    </ExcelWorkbook>
+    <Styles>
+        <Style ss:ID="BoldTextCenteredStyle">
+            <Alignment ss:Horizontal="Center" ss:Vertical="Top"/>
+            <Font ss:FontName="Arial" x:Family="Swiss" ss:Size="11" ss:Color="#000000" ss:Bold="1"/>
+        </Style>
+        <Style ss:ID="DateTimeStyle">
+            <NumberFormat ss:Format="Short Date" />
+        </Style>
+    </Styles>
+    <Worksheet ss:Name="{10}">
+        <Table ss:DefaultRowHeight="15">
+            <Column ss:Width="100"/>
+            <Column ss:Width="100"/>
+            <Column ss:Width="100"/>
+            <Column ss:Width="80"/>
+            <Column ss:Width="100"/>
+            <Column ss:Width="200"/>
+            <Column ss:Width="200"/>
+            <Row ss:AutoFitHeight="0">
+                <Cell ss:StyleID="BoldTextCenteredStyle">
+                    <Data ss:Type="String">{0}</Data>
+                </Cell>
+                <Cell ss:StyleID="BoldTextCenteredStyle">
+                    <Data ss:Type="String">{1}</Data>
+                </Cell>
+                <Cell ss:StyleID="BoldTextCenteredStyle">
+                    <Data ss:Type="String">{2}</Data>
+                </Cell>
+                <Cell ss:StyleID="BoldTextCenteredStyle">
+                    <Data ss:Type="String">{3}</Data>
+                </Cell>
+                <Cell ss:StyleID="BoldTextCenteredStyle">
+                    <Data ss:Type="String">{4}</Data>
+                </Cell>
+                <Cell ss:StyleID="BoldTextCenteredStyle">
+                    <Data ss:Type="String">{5}</Data>
+                </Cell>
+                <Cell ss:StyleID="BoldTextCenteredStyle">
+                    <Data ss:Type="String">{6}</Data>
+                </Cell>
+            </Row>
+            <Row ss:AutoFitHeight="0">
+                <Cell>
+                    <Data ss:Type="String">{7}</Data>
+                </Cell>
+                <Cell>
+                    <Data ss:Type="String">{8}</Data>
+                </Cell>
+                <Cell>
+                    <Data ss:Type="String">{9}</Data>
+                </Cell>
+                <Cell ss:StyleID="DateTimeStyle">
+                    <Data ss:Type="DateTime">{11}</Data>
+                </Cell>
+                <Cell>
+                    <Data ss:Type="String">{12}</Data>
+                </Cell>
+                <Cell>
+                    <Data ss:Type="String">{13}</Data>
+                </Cell>
+                <Cell>
+                    <Data ss:Type="String">{14}</Data>
+                </Cell>
+            </Row>
+        </Table>
+        <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+            <PageSetup>
+                <Header x:Margin="0.3"/>
+                <Footer x:Margin="0.3"/>
+                <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+            </PageSetup>
+            <Unsynced/>
+            <Selected/>
+            <Panes>
+                <Pane>
+                    <Number>3</Number>
+                    <ActiveRow>2</ActiveRow>
+                </Pane>
+            </Panes>
+            <ProtectObjects>False</ProtectObjects>
+            <ProtectScenarios>False</ProtectScenarios>
+        </WorksheetOptions>
+    </Worksheet>
+    <Worksheet ss:Name="{15}">
+        <Table ss:DefaultRowHeight="15">
+            <Column ss:Width="100"/>
+            <Column ss:Width="100"/>
+            <Column ss:Width="140"/>
+            <Column ss:Width="100"/>
+            <Column ss:Width="140"/>
+            <Column ss:Width="150"/>
+            <Row ss:AutoFitHeight="0">
+                <Cell ss:StyleID="BoldTextCenteredStyle">
+                    <Data ss:Type="String">{16}</Data>
+                </Cell>
+                <Cell ss:StyleID="BoldTextCenteredStyle">
+                    <Data ss:Type="String">{17}</Data>
+                </Cell>
+                <Cell ss:StyleID="BoldTextCenteredStyle">
+                    <Data ss:Type="String">{18}</Data>
+                </Cell>
+                <Cell ss:StyleID="BoldTextCenteredStyle">
+                    <Data ss:Type="String">{19}</Data>
+                </Cell>
+                <Cell ss:StyleID="BoldTextCenteredStyle">
+                    <Data ss:Type="String">{20}</Data>
+                </Cell>
+                <Cell ss:StyleID="BoldTextCenteredStyle">
+                    <Data ss:Type="String">{21}</Data>
+                </Cell>
+            </Row>
+            {22}
+        </Table>
+        <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+            <PageSetup>
+                <Header x:Margin="0.3"/>
+                <Footer x:Margin="0.3"/>
+                <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+            </PageSetup>
+            <Unsynced/>
+            <Selected/>
+            <Panes>
+                <Pane>
+                    <Number>3</Number>
+                    <ActiveRow>2</ActiveRow>
+                </Pane>
+            </Panes>
+            <ProtectObjects>False</ProtectObjects>
+            <ProtectScenarios>False</ProtectScenarios>
+        </WorksheetOptions>
+    </Worksheet>
+</Workbook>

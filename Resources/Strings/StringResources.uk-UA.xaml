@@ -1,0 +1,112 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:System="clr-namespace:System;assembly=mscorlib">
+    <!-- Application Title -->
+    <System:String x:Key="ApplicationTitle">IDS GROUP UKRAINE - Тест-Анкетування</System:String>
+    <!-- Page Titles -->
+    <System:String x:Key="SettingsPageTitle">Налаштування</System:String>
+    <System:String x:Key="UserFormPageTitle">АНКЕТА</System:String>
+    <System:String x:Key="TimeExpiredPageTitle">ЧАС ВИЧЕРПАНО</System:String>
+    <System:String x:Key="ResultPageTitle">Підсумки анкетування</System:String>
+    <!-- Section Titles -->
+    <System:String x:Key="UserInfoAttributesTitle">Необхідні анкетні дані</System:String>
+    <System:String x:Key="TimeLimitTitle">Обмеження за часом (хв.)</System:String>
+    <System:String x:Key="InterfaceLanguageTitle">Мова інтерфейсу</System:String>
+    <!-- Small Titles -->
+    <System:String x:Key="IssueContentTitle">Текст питання</System:String>
+    <System:String x:Key="CorrectAnswerPointsTitle">Кількість балів за правильну відповідь</System:String>
+    <System:String x:Key="IssueSectionsTitle">Розділ питання</System:String>
+    <System:String x:Key="AnswersTitle">Варіанти відповідей</System:String>
+    <System:String x:Key="ChooseCorrectAnswerTitle">Оберіть правильну відповідь</System:String>
+    <System:String x:Key="ChooseCorrectOrderTitle">Оберіть правильний порядок</System:String>
+    <System:String x:Key="CorrectAnswerTitle">Правильна відповідь</System:String>
+    <System:String x:Key="YourAnswerTitle">Ваша відповідь</System:String>
+    <System:String x:Key="NumberOfShelvesTitle">Кількість полиць:</System:String>
+    <System:String x:Key="PlacesOnShelfTitle">Кількість пляшок на полиці:</System:String>
+    <!-- Simple Titles -->
+    <System:String x:Key="LastNameTitle">Прізвище</System:String>
+    <System:String x:Key="FirstNameTitle">Ім’я</System:String>
+    <System:String x:Key="MiddleNameTitle">По-батькові</System:String>
+    <System:String x:Key="PositionTitle">Посада</System:String>
+    <System:String x:Key="LevelTitle">Рівень співробітника</System:String>
+    <System:String x:Key="ExperienceTitle">Досвід роботи на даній посаді</System:String>
+    <System:String x:Key="DistributionChannelTitle">Канал збуту</System:String>
+    <System:String x:Key="RegionTitle">Регіон</System:String>
+    <System:String x:Key="DateTitle">Дата</System:String>
+    <System:String x:Key="CorrectAnswersTitle">Правильні відповіді</System:String>
+    <System:String x:Key="IncorrectAnswersTitle">Неправильні відповіді</System:String>
+    <System:String x:Key="WholeAnswerPointsTitle">Всього балів</System:String>
+    <!-- Report Titles -->
+    <System:String x:Key="SetTitle">Блок</System:String>
+    <System:String x:Key="IssueTitle">Питання</System:String>
+    <System:String x:Key="AnswerTitle">Відповідь</System:String>
+    <System:String x:Key="IsCorrectTitle">Правильно?</System:String>
+    <System:String x:Key="AnswerPointsTitle">Кількість можливих балів</System:String>
+    <System:String x:Key="YesTitle">Так</System:String>
+    <System:String x:Key="NoTitle">Ні</System:String>
+    <!-- Button Titles -->
+    <System:String x:Key="EditButtonTitle">Редагувати</System:String>
+    <System:String x:Key="SettingsButtonTitle">Налаштування</System:String>
+    <System:String x:Key="SaveButtonTitle">Зберегти</System:String>
+    <System:String x:Key="PrevButtonTitle">Назад</System:String>
+    <System:String x:Key="NextButtonTitle">Далі</System:String>
+    <System:String x:Key="SkipButtonTitle">Пропустити</System:String>
+    <System:String x:Key="CreateButtonTitle">Додати</System:String>
+    <System:String x:Key="DeleteButtonTitle">Видалити</System:String>
+    <System:String x:Key="Set1ButtonTitle">Блок 1</System:String>
+    <System:String x:Key="Set2ButtonTitle">Блок 2</System:String>
+    <System:String x:Key="Set3ButtonTitle">Блок 3</System:String>
+    <System:String x:Key="Set4ButtonTitle">Блок 4</System:String>
+    <System:String x:Key="Set5ButtonTitle">Блок 5</System:String>
+    <System:String x:Key="Set6ButtonTitle">Блок 6</System:String>
+    <System:String x:Key="Set7ButtonTitle">Блок 7</System:String>
+    <System:String x:Key="Set8ButtonTitle">Блок 8</System:String>
+    <System:String x:Key="ImageSelectionButtonTitle">Картинка...</System:String>
+    <System:String x:Key="AddImageButtonTitle">Додати картинку...</System:String>
+    <System:String x:Key="DeleteImageButtonTitle">Видалити картинку</System:String>
+    <System:String x:Key="UpButtonTitle">Вгору</System:String>
+    <System:String x:Key="DownButtonTitle">Вниз</System:String>
+    <!-- Menu Item Titles -->
+    <System:String x:Key="SelectionIssueTitle">Питання вибору</System:String>
+    <System:String x:Key="SelectionInImageIssueTitle">Питання вибору по картинці</System:String>
+    <System:String x:Key="PlacementIssueTitle">Питання розстановки</System:String>
+    <System:String x:Key="OrderIssueTitle">Питання порядку</System:String>
+    <System:String x:Key="ImageSelectionIssueTitle">Питання вибору 2</System:String>
+    <!-- Error Titles -->
+    <System:String x:Key="ErrorIssueContentTitle">Введіть текст питання (на укр. та рус.)</System:String>
+    <System:String x:Key="ErrorIssueSectionTitle">Виберіть канал збуту та регіон</System:String>
+    <System:String x:Key="ErrorSelectionIssueAnswersTitle">Введіть усі варіанти відповідей (на укр. та рус.)</System:String>
+    <System:String x:Key="ErrorSelectionInImageTitle">Виберіть картинку</System:String>
+    <System:String x:Key="ErrorUserFormTitle">Введіть всю необхідну інформацію</System:String>
+    <!-- Distribution Channels -->
+    <System:String x:Key="KATitle">Стандартний роздріб (CР)</System:String>
+    <System:String x:Key="OnTradeTitle">Horeca</System:String>
+    <System:String x:Key="OffTradeTitle">Сучасна торгівля (МТ)</System:String>
+    <!-- Regions -->
+    <System:String x:Key="WestUkraineTitle">Західна Україна</System:String>
+    <System:String x:Key="EastUkraineTitle">Україна</System:String>
+    <!-- Positions -->
+    <System:String x:Key="Position01Title">Мерчендайзер</System:String>
+    <System:String x:Key="Position02Title">Асистент торгового представника</System:String>
+    <System:String x:Key="Position03Title">Торговий представник</System:String>
+    <System:String x:Key="Position04Title">Консультант по Horeca</System:String>
+    <System:String x:Key="Position05Title">Районний координатор з продажу</System:String>
+    <System:String x:Key="Position06Title">Територіальний менеджер з продажу</System:String>
+    <System:String x:Key="Position07Title">Менеджер по роботі з сучасними каналами продажу (МСКП)</System:String>
+    <System:String x:Key="Position08Title">Менеджер по розвитку сучасних каналів продажу (МРСКП)</System:String>
+    <System:String x:Key="Position09Title">Регіональний менеджер з продажу</System:String>
+    <!-- Levels -->
+    <System:String x:Key="Level01Title">A</System:String>
+    <System:String x:Key="Level02Title">B</System:String>
+    <System:String x:Key="Level03Title">C</System:String>
+    <System:String x:Key="Level04Title">D</System:String>
+    <System:String x:Key="Level05Title">E</System:String>
+    <System:String x:Key="Level06Title">Без рівня</System:String>
+    <!-- Experiences -->
+    <System:String x:Key="Experience01Title">0-3 місяці</System:String>
+    <System:String x:Key="Experience02Title">3-6 місяців</System:String>
+    <System:String x:Key="Experience03Title">6-12 місяців</System:String>
+    <System:String x:Key="Experience04Title">1-3 роки</System:String>
+    <System:String x:Key="Experience05Title">3-5 років</System:String>
+    <System:String x:Key="Experience06Title">Більше 5 років</System:String>
+</ResourceDictionary>

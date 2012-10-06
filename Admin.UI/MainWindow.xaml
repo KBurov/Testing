@@ -1,0 +1,9 @@
+﻿<NavigationWindow x:Class="Testing.Admin.UI.MainWindow"
+                  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                  Style="{DynamicResource MainWindowStyle}"
+                  Title="{DynamicResource ApplicationTitle}"
+                  AllowsTransparency="True"
+                  WindowStartupLocation="CenterScreen"
+                  Source="Pages/SplashScreenPage.xaml">
+</NavigationWindow>

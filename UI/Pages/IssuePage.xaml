@@ -1,0 +1,157 @@
+﻿<Page x:Class="Testing.UI.Pages.IssuePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:Local="clr-namespace:Testing.UI.Controls"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300">
+    <Page.Resources>
+        <BooleanToVisibilityConverter x:Key="BoolToVisibilityConverter" />
+
+        <DataTemplate x:Key="SelectionIssueTemplate">
+            <Local:SelectionIssue />
+        </DataTemplate>
+        <DataTemplate x:Key="SelectionInImageIssueTemplate">
+            <Local:SelectionInImageIssue />
+        </DataTemplate>
+        <DataTemplate x:Key="SelectionInImageIssueAdditionalTemplate">
+            <Local:SelectionInImageIssueAdditional />
+        </DataTemplate>
+        <DataTemplate x:Key="ImageSelectionIssueTemplate">
+            <Local:ImageSelectionIssue />
+        </DataTemplate>
+        <DataTemplate x:Key="OrderIssueTemplate">
+            <Local:OrderIssue />
+        </DataTemplate>
+        <DataTemplate x:Key="PlacementIssueTemplate">
+            <Local:PlacementIssue />
+        </DataTemplate>
+        <DataTemplate x:Key="PlacementIssueAdditionalTemplate">
+            <Local:PlacementIssueAdditional />
+        </DataTemplate>
+    </Page.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <!-- Background -->
+        <Grid Style="{DynamicResource TopBackgroundPanelStyle}" />
+        <Image Style="{DynamicResource LogoImageStyle}" />
+        <Grid Grid.Row="3" Style="{DynamicResource BottomBackgroundPanelStyle}" />
+        <Image Grid.Row="3" Style="{DynamicResource BottomBackgroundImageStyle}" />
+
+        <Grid Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <!-- Set buttons -->
+                <StackPanel Style="{DynamicResource SetButtonsPanelStyle}">
+                    <Button Style="{DynamicResource SetButtonStyle}" Content="{DynamicResource Set1ButtonTitle}" IsEnabled="{Binding IsSet1ButtonEnabled}" IsHitTestVisible="False" />
+                    <Button Style="{DynamicResource SetButtonStyle}" Content="{DynamicResource Set2ButtonTitle}" IsEnabled="{Binding IsSet2ButtonEnabled}" IsHitTestVisible="False" />
+                    <Button Style="{DynamicResource SetButtonStyle}" Content="{DynamicResource Set3ButtonTitle}" IsEnabled="{Binding IsSet3ButtonEnabled}" IsHitTestVisible="False" />
+                    <Button Style="{DynamicResource SetButtonStyle}" Content="{DynamicResource Set4ButtonTitle}" IsEnabled="{Binding IsSet4ButtonEnabled}" IsHitTestVisible="False" />
+                    <Button Style="{DynamicResource SetButtonStyle}" Content="{DynamicResource Set5ButtonTitle}" IsEnabled="{Binding IsSet5ButtonEnabled}" IsHitTestVisible="False" />
+                    <Button Style="{DynamicResource SetButtonStyle}" Content="{DynamicResource Set6ButtonTitle}" IsEnabled="{Binding IsSet6ButtonEnabled}" IsHitTestVisible="False" />
+                    <Button Style="{DynamicResource SetButtonStyle}" Content="{DynamicResource Set7ButtonTitle}" IsEnabled="{Binding IsSet7ButtonEnabled}" IsHitTestVisible="False" />
+                    <Button Style="{DynamicResource SetButtonStyle}" Content="{DynamicResource Set8ButtonTitle}" IsEnabled="True" IsHitTestVisible="False" />
+                </StackPanel>
+                <!-- Window buttons -->
+                <StackPanel Grid.Column="1" Style="{DynamicResource WindowButtonsPanelStyle}">
+                    <Button Style="{DynamicResource WindowButtonStyle}" Content="_" Click="MinimizeButtonClick" />
+                    <Button Style="{DynamicResource WindowButtonStyle}" Content=" " Click="MaximizeRestoreButtonClick" />
+                    <Button Style="{DynamicResource WindowButtonStyle}" Content="x" Click="CloseButtonClick" />
+                </StackPanel>
+            </Grid>
+            <!-- Issue -->
+            <Grid Grid.Row="1" Style="{DynamicResource IssuePanelStyle}" Visibility="{Binding IsIssueSelected, Converter={StaticResource BoolToVisibilityConverter}}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="10" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <!-- Issue Content -->
+                <Grid Grid.ColumnSpan="{Binding DetailsColumnSpan}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Style="{DynamicResource SmallTitleStyle}" Content="{Binding DisplayedIssueNumber}" />
+                    <TextBlock Grid.Column="1" Style="{DynamicResource SmallTitleStyle}" TextWrapping="Wrap" Text="{Binding IssueContent, Mode=OneWay}" />
+                </Grid>
+                <!-- Issue details -->
+                <ContentControl Grid.ColumnSpan="{Binding DetailsColumnSpan}" Grid.Row="2" Content="{Binding}" Focusable="False">
+                    <ContentControl.Style>
+                        <Style TargetType="ContentControl">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding IssueType}" Value="Selection">
+                                    <Setter Property="ContentTemplate" Value="{StaticResource SelectionIssueTemplate}" />
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding IssueType}" Value="SelectionInImage">
+                                    <Setter Property="ContentTemplate" Value="{StaticResource SelectionInImageIssueTemplate}" />
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding IssueType}" Value="ImageSelection">
+                                    <Setter Property="ContentTemplate" Value="{StaticResource ImageSelectionIssueTemplate}" />
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding IssueType}" Value="Order">
+                                    <Setter Property="ContentTemplate" Value="{StaticResource OrderIssueTemplate}" />
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding IssueType}" Value="Placement">
+                                    <Setter Property="ContentTemplate" Value="{StaticResource PlacementIssueTemplate}" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </ContentControl.Style>
+                </ContentControl>
+                <!-- Issue additional details -->
+                <ContentControl Grid.Column="2" Grid.RowSpan="2" Content="{Binding}" HorizontalAlignment="Stretch" Focusable="False" Visibility="{Binding IsIssueAdditionalDetailsVisible, Converter={StaticResource BoolToVisibilityConverter}}">
+                    <ContentControl.Style>
+                        <Style TargetType="ContentControl">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding IssueType}" Value="SelectionInImage">
+                                    <Setter Property="ContentTemplate" Value="{StaticResource SelectionInImageIssueAdditionalTemplate}" />
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding IssueType}" Value="Placement">
+                                    <Setter Property="ContentTemplate" Value="{StaticResource PlacementIssueAdditionalTemplate}" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </ContentControl.Style>
+                </ContentControl>
+            </Grid>
+        </Grid>
+        <!-- Interface buttons & timer -->
+        <Grid Grid.Row="2" Grid.RowSpan="2" Style="{DynamicResource BottomPanelStyle}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Orientation="Horizontal">
+                <Button Style="{DynamicResource BottomButtonStyle}" Content="{DynamicResource SkipButtonTitle}" Command="{Binding SkipCommand}" />
+                <Button Style="{DynamicResource BottomButtonStyle}" Content="{DynamicResource NextButtonTitle}" Command="{Binding NextCommand}" CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Page}}}" />
+            </StackPanel>
+
+            <StackPanel Grid.Column="1" Style="{DynamicResource TimerStackPanelStyle}" Visibility="{Binding IsTimeLimited, Converter={StaticResource BoolToVisibilityConverter}}">
+                <Image Style="{DynamicResource TimerPointerImageStyle}" />
+                <Label Name="_timerLabel" Style="{DynamicResource LabelStyle}" Content="{Binding TimeLimit, Mode=OneTime}" />
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>

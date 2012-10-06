@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Testing.Admin.UI.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="InterfaceLanguage" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">uk-UA</Value>
+    </Setting>
+    <Setting Name="SkinName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">BaseSkin</Value>
+    </Setting>
+    <Setting Name="SplashScreenTimeout" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">2000</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

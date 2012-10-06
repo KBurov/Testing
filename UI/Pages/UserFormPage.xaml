@@ -1,0 +1,227 @@
+﻿<Page x:Class="Testing.UI.Pages.UserFormPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:Common="clr-namespace:Testing.Common;assembly=Testing.Common"
+      xmlns:Wpf="clr-namespace:Wanderer.Library.Wpf.Markup;assembly=Wanderer.Library.Wpf"
+      mc:Ignorable="d" 
+      d:DesignHeight="300" d:DesignWidth="300">
+    <Page.Resources>
+        <BooleanToVisibilityConverter x:Key="BoolToVisibilityConverter" />
+    </Page.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <!-- Background -->
+        <Grid Style="{DynamicResource TopBackgroundPanelStyle}" />
+        <Image Style="{DynamicResource LogoImageStyle}" />
+        <Grid Grid.Row="3" Style="{DynamicResource BottomBackgroundPanelStyle}" />
+        <Image Grid.Row="3" Style="{DynamicResource BottomBackgroundImageStyle}" />
+
+        <StackPanel Grid.RowSpan="2" Orientation="Vertical">
+            <Grid>
+                <!-- Page Title -->
+                <Label Style="{DynamicResource PageTitleStyle}" Content="{DynamicResource UserFormPageTitle}" />
+                <!-- Window Buttons -->
+                <StackPanel Style="{DynamicResource WindowButtonsPanelStyle}">
+                    <Button Style="{DynamicResource WindowButtonStyle}" Content="_" Click="MinimizeButtonClick" />
+                    <Button Style="{DynamicResource WindowButtonStyle}" Content=" " Click="MaximizeRestoreButtonClick" />
+                    <Button Style="{DynamicResource WindowButtonStyle}" Content="x" Click="CloseButtonClick" />
+                </StackPanel>
+            </Grid>
+            <!-- User Form Error & Current Date -->
+            <Grid Style="{DynamicResource SettingsPanelStyle}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Style="{DynamicResource ErrorLabelStyle}" Content="{DynamicResource ErrorUserFormTitle}" HorizontalAlignment="Left" Visibility="{Binding IsUserFormError, Converter={StaticResource BoolToVisibilityConverter}}" />
+
+                <StackPanel Grid.Column="1" Style="{DynamicResource HorizontalRightStackPanelStyle}">
+                    <Label Style="{DynamicResource LabelStyle}" Content="{DynamicResource DateTitle}" />
+                    <Image Style="{DynamicResource DatePointerImageStyle}" />
+                    <Label Style="{DynamicResource DateLabelStyle}" Content="{Binding CurrentDate, Mode=OneTime}" />
+                </StackPanel>
+            </Grid>
+            <!-- User Attributes -->
+            <StackPanel Style="{DynamicResource UserFormPanelStyle}" Orientation="Vertical">
+                <!-- Interface Language -->
+                <Grid Style="{DynamicResource UserAttributePanelStyle}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Image Style="{DynamicResource UserAttributePointerImageStyle}" />
+                        <Label Style="{DynamicResource LabelStyle}" Content="{DynamicResource InterfaceLanguageTitle}" />
+                    </StackPanel>
+
+                    <Image Grid.Column="1" Style="{DynamicResource UserAttributeDelimiterImageStyle}" />
+
+                    <ComboBox Grid.Column="2" ItemsSource="{Binding Source={Wpf:Enumeration {x:Type Common:InterfaceLanguages}}}" DisplayMemberPath="Description" SelectedValue="{Binding InterfaceLanguage}" SelectedValuePath="Value" />
+                </Grid>
+                <!-- Last Name -->
+                <Grid Style="{DynamicResource UserAttributePanelStyle}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Image Style="{DynamicResource UserAttributePointerImageStyle}" />
+                        <Label Style="{DynamicResource LabelStyle}" Content="{DynamicResource LastNameTitle}" />
+                    </StackPanel>
+
+                    <Image Grid.Column="1" Style="{DynamicResource UserAttributeDelimiterImageStyle}" />
+
+                    <TextBox Grid.Column="2" Style="{DynamicResource TextBoxStyle}" Text="{Binding LastName, UpdateSourceTrigger=PropertyChanged}" />
+                </Grid>
+                <!-- First Name -->
+                <Grid Style="{DynamicResource UserAttributePanelStyle}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Image Style="{DynamicResource UserAttributePointerImageStyle}" />
+                        <Label Style="{DynamicResource LabelStyle}" Content="{DynamicResource FirstNameTitle}" />
+                    </StackPanel>
+
+                    <Image Grid.Column="1" Style="{DynamicResource UserAttributeDelimiterImageStyle}" />
+
+                    <TextBox Grid.Column="2" Style="{DynamicResource TextBoxStyle}" Text="{Binding FirstName, UpdateSourceTrigger=PropertyChanged}" />
+                </Grid>
+                <!-- Middle Name -->
+                <Grid Style="{DynamicResource UserAttributePanelStyle}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Image Style="{DynamicResource UserAttributePointerImageStyle}" />
+                        <Label Style="{DynamicResource LabelStyle}" Content="{DynamicResource MiddleNameTitle}" />
+                    </StackPanel>
+
+                    <Image Grid.Column="1" Style="{DynamicResource UserAttributeDelimiterImageStyle}" />
+
+                    <TextBox Grid.Column="2" Style="{DynamicResource TextBoxStyle}" Text="{Binding MiddleName, UpdateSourceTrigger=PropertyChanged}" />
+                </Grid>
+                <!-- Position -->
+                <Grid Style="{DynamicResource UserAttributePanelStyle}" Visibility="{Binding IsPositionVisible, Converter={StaticResource BoolToVisibilityConverter}}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Image Style="{DynamicResource UserAttributePointerImageStyle}" />
+                        <Label Style="{DynamicResource LabelStyle}" Content="{DynamicResource PositionTitle}" />
+                    </StackPanel>
+
+                    <Image Grid.Column="1" Style="{DynamicResource UserAttributeDelimiterImageStyle}" />
+
+                    <ComboBox Grid.Column="2" ItemsSource="{Binding Positions}" SelectedValue="{Binding Position, Mode=OneWayToSource}" />
+                </Grid>
+                <!-- Level -->
+                <Grid Style="{DynamicResource UserAttributePanelStyle}" Visibility="{Binding IsLevelVisible, Converter={StaticResource BoolToVisibilityConverter}}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Image Style="{DynamicResource UserAttributePointerImageStyle}" />
+                        <Label Style="{DynamicResource LabelStyle}" Content="{DynamicResource LevelTitle}" />
+                    </StackPanel>
+
+                    <Image Grid.Column="1" Style="{DynamicResource UserAttributeDelimiterImageStyle}" />
+
+                    <ComboBox Grid.Column="2" ItemsSource="{Binding Levels}"  SelectedValue="{Binding Level, Mode=OneWayToSource}" />
+                </Grid>
+                <!-- Experience -->
+                <Grid Style="{DynamicResource UserAttributePanelStyle}" Visibility="{Binding IsExperienceVisible, Converter={StaticResource BoolToVisibilityConverter}}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Image Style="{DynamicResource UserAttributePointerImageStyle}" />
+                        <Label Style="{DynamicResource LabelStyle}" Content="{DynamicResource ExperienceTitle}" />
+                    </StackPanel>
+
+                    <Image Grid.Column="1" Style="{DynamicResource UserAttributeDelimiterImageStyle}" />
+
+                    <ComboBox Grid.Column="2" ItemsSource="{Binding Experiences}" SelectedValue="{Binding Experience, Mode=OneWayToSource}" />
+                </Grid>
+                <!-- Distribution channel -->
+                <Grid Style="{DynamicResource UserAttributePanelStyle}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Image Style="{DynamicResource UserAttributePointerImageStyle}" />
+                        <Label Style="{DynamicResource LabelStyle}" Content="{DynamicResource DistributionChannelTitle}" />
+                    </StackPanel>
+
+                    <Image Grid.Column="1" Style="{DynamicResource UserAttributeDelimiterImageStyle}" />
+
+                    <ComboBox Grid.Column="2" ItemsSource="{Binding DistributionChannelSource}" DisplayMemberPath="Description" SelectedValue="{Binding DistributionChannel}" SelectedValuePath="Channel" />
+                </Grid>
+                <!-- Region -->
+                <Grid Style="{DynamicResource UserAttributePanelStyle}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Image Style="{DynamicResource UserAttributePointerImageStyle}" />
+                        <Label Style="{DynamicResource LabelStyle}" Content="{DynamicResource RegionTitle}" />
+                    </StackPanel>
+
+                    <Image Grid.Column="1" Style="{DynamicResource UserAttributeDelimiterImageStyle}" />
+
+                    <ComboBox Grid.Column="2" ItemsSource="{Binding RegionSource}" DisplayMemberPath="Description" SelectedValue="{Binding Region}" SelectedValuePath="Region" />
+                </Grid>
+            </StackPanel>
+        </StackPanel>
+        <!-- Interface buttons & timer -->
+        <Grid Grid.Row="2" Grid.RowSpan="2" Style="{DynamicResource BottomPanelStyle}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Orientation="Horizontal">
+                <Button Style="{DynamicResource BottomButtonStyle}" Content="{DynamicResource NextButtonTitle}" Command="{Binding NextCommand}" CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Page}}}" />
+            </StackPanel>
+
+            <StackPanel Grid.Column="1" Style="{DynamicResource TimerStackPanelStyle}" Visibility="{Binding IsTimeLimited, Converter={StaticResource BoolToVisibilityConverter}}">
+                <Image Style="{DynamicResource TimerPointerImageStyle}" />
+                <Label Style="{DynamicResource LabelStyle}" Content="{Binding TimeLimit, Mode=OneTime}" />
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>

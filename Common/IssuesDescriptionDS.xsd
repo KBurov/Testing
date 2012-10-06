@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="IssuesDescriptionDS" targetNamespace="http://tempuri.org/IssuesDescriptionDS.xsd" xmlns:mstns="http://tempuri.org/IssuesDescriptionDS.xsd" xmlns="http://tempuri.org/IssuesDescriptionDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="IssuesDescriptionDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="IssuesDescriptionDS" msprop:Generator_UserDSName="IssuesDescriptionDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="UserInfoSettings" msprop:Generator_TableClassName="UserInfoSettingsDataTable" msprop:Generator_TableVarName="tableUserInfoSettings" msprop:Generator_TablePropName="UserInfoSettings" msprop:Generator_RowDeletingName="UserInfoSettingsRowDeleting" msprop:Generator_UserTableName="UserInfoSettings" msprop:Generator_RowChangingName="UserInfoSettingsRowChanging" msprop:Generator_RowEvHandlerName="UserInfoSettingsRowChangeEventHandler" msprop:Generator_RowDeletedName="UserInfoSettingsRowDeleted" msprop:Generator_RowEvArgName="UserInfoSettingsRowChangeEvent" msprop:Generator_RowChangedName="UserInfoSettingsRowChanged" msprop:Generator_RowClassName="UserInfoSettingsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IsPositionVisible" msprop:Generator_ColumnVarNameInTable="columnIsPositionVisible" msprop:Generator_ColumnPropNameInRow="IsPositionVisible" msprop:Generator_ColumnPropNameInTable="IsPositionVisibleColumn" msprop:Generator_UserColumnName="IsPositionVisible" type="xs:boolean" />
+              <xs:element name="IsLevelVisible" msprop:Generator_ColumnVarNameInTable="columnIsLevelVisible" msprop:Generator_ColumnPropNameInRow="IsLevelVisible" msprop:Generator_ColumnPropNameInTable="IsLevelVisibleColumn" msprop:Generator_UserColumnName="IsLevelVisible" type="xs:boolean" />
+              <xs:element name="IsExperienceVisible" msprop:Generator_ColumnVarNameInTable="columnIsExperienceVisible" msprop:Generator_ColumnPropNameInRow="IsExperienceVisible" msprop:Generator_ColumnPropNameInTable="IsExperienceVisibleColumn" msprop:Generator_UserColumnName="IsExperienceVisible" type="xs:boolean" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="IssuesSettings" msprop:Generator_TableClassName="IssuesSettingsDataTable" msprop:Generator_TableVarName="tableIssuesSettings" msprop:Generator_TablePropName="IssuesSettings" msprop:Generator_RowDeletingName="IssuesSettingsRowDeleting" msprop:Generator_UserTableName="IssuesSettings" msprop:Generator_RowChangingName="IssuesSettingsRowChanging" msprop:Generator_RowEvHandlerName="IssuesSettingsRowChangeEventHandler" msprop:Generator_RowDeletedName="IssuesSettingsRowDeleted" msprop:Generator_RowEvArgName="IssuesSettingsRowChangeEvent" msprop:Generator_RowChangedName="IssuesSettingsRowChanged" msprop:Generator_RowClassName="IssuesSettingsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IsTimeLimited" msprop:Generator_ColumnVarNameInTable="columnIsTimeLimited" msprop:Generator_ColumnPropNameInRow="IsTimeLimited" msprop:Generator_ColumnPropNameInTable="IsTimeLimitedColumn" msprop:Generator_UserColumnName="IsTimeLimited" type="xs:boolean" />
+              <xs:element name="TimeLimit" msprop:Generator_ColumnVarNameInTable="columnTimeLimit" msprop:Generator_ColumnPropNameInRow="TimeLimit" msprop:Generator_ColumnPropNameInTable="TimeLimitColumn" msprop:Generator_UserColumnName="TimeLimit" type="xs:unsignedInt" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Issues" msprop:Generator_TableClassName="IssuesDataTable" msprop:Generator_TableVarName="tableIssues" msprop:Generator_TablePropName="Issues" msprop:Generator_RowDeletingName="IssuesRowDeleting" msprop:Generator_UserTableName="Issues" msprop:Generator_RowChangingName="IssuesRowChanging" msprop:Generator_RowEvHandlerName="IssuesRowChangeEventHandler" msprop:Generator_RowDeletedName="IssuesRowDeleted" msprop:Generator_RowEvArgName="IssuesRowChangeEvent" msprop:Generator_RowChangedName="IssuesRowChanged" msprop:Generator_RowClassName="IssuesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IssueID" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnIssueID" msprop:Generator_ColumnPropNameInRow="IssueID" msprop:Generator_ColumnPropNameInTable="IssueIDColumn" msprop:Generator_UserColumnName="IssueID" type="xs:int" />
+              <xs:element name="TypeID" msprop:Generator_ColumnVarNameInTable="columnTypeID" msprop:Generator_ColumnPropNameInRow="TypeID" msprop:Generator_ColumnPropNameInTable="TypeIDColumn" msprop:Generator_UserColumnName="TypeID" type="xs:int" />
+              <xs:element name="SetID" msprop:Generator_ColumnVarNameInTable="columnSetID" msprop:Generator_ColumnPropNameInRow="SetID" msprop:Generator_ColumnPropNameInTable="SetIDColumn" msprop:Generator_UserColumnName="SetID" type="xs:int" />
+              <xs:element name="DistributionChannelID" msprop:Generator_ColumnVarNameInTable="columnDistributionChannelID" msprop:Generator_ColumnPropNameInRow="DistributionChannelID" msprop:Generator_ColumnPropNameInTable="DistributionChannelIDColumn" msprop:Generator_UserColumnName="DistributionChannelID" type="xs:int" />
+              <xs:element name="RegionID" msprop:Generator_ColumnVarNameInTable="columnRegionID" msprop:Generator_ColumnPropNameInRow="RegionID" msprop:Generator_ColumnPropNameInTable="RegionIDColumn" msprop:Generator_UserColumnName="RegionID" type="xs:int" />
+              <xs:element name="ContentUA" msprop:Generator_ColumnVarNameInTable="columnContentUA" msprop:Generator_ColumnPropNameInRow="ContentUA" msprop:Generator_ColumnPropNameInTable="ContentUAColumn" msprop:Generator_UserColumnName="ContentUA" type="xs:string" />
+              <xs:element name="ContentRU" msprop:Generator_ColumnVarNameInTable="columnContentRU" msprop:Generator_ColumnPropNameInRow="ContentRU" msprop:Generator_ColumnPropNameInTable="ContentRUColumn" msprop:Generator_UserColumnName="ContentRU" type="xs:string" />
+              <xs:element name="CorrectAnswerPoints" msprop:Generator_ColumnVarNameInTable="columnCorrectAnswerPoints" msprop:Generator_ColumnPropNameInRow="CorrectAnswerPoints" msprop:Generator_ColumnPropNameInTable="CorrectAnswerPointsColumn" msprop:Generator_UserColumnName="CorrectAnswerPoints" type="xs:unsignedInt" />
+              <xs:element name="NumberOfShelves" msprop:Generator_ColumnVarNameInTable="columnNumberOfShelves" msprop:Generator_ColumnPropNameInRow="NumberOfShelves" msprop:Generator_ColumnPropNameInTable="NumberOfShelvesColumn" msprop:Generator_UserColumnName="NumberOfShelves" type="xs:unsignedInt" minOccurs="0" />
+              <xs:element name="PlacesOnShelf" msprop:Generator_ColumnVarNameInTable="columnPlacesOnShelf" msprop:Generator_ColumnPropNameInRow="PlacesOnShelf" msprop:Generator_ColumnPropNameInTable="PlacesOnShelfColumn" msprop:Generator_UserColumnName="PlacesOnShelf" type="xs:unsignedInt" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Answers" msprop:Generator_TableClassName="AnswersDataTable" msprop:Generator_TableVarName="tableAnswers" msprop:Generator_TablePropName="Answers" msprop:Generator_RowDeletingName="AnswersRowDeleting" msprop:Generator_UserTableName="Answers" msprop:Generator_RowChangingName="AnswersRowChanging" msprop:Generator_RowEvHandlerName="AnswersRowChangeEventHandler" msprop:Generator_RowDeletedName="AnswersRowDeleted" msprop:Generator_RowEvArgName="AnswersRowChangeEvent" msprop:Generator_RowChangedName="AnswersRowChanged" msprop:Generator_RowClassName="AnswersRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IssueID" msprop:Generator_ColumnVarNameInTable="columnIssueID" msprop:Generator_ColumnPropNameInRow="IssueID" msprop:Generator_ColumnPropNameInTable="IssueIDColumn" msprop:Generator_UserColumnName="IssueID" type="xs:int" minOccurs="0" />
+              <xs:element name="IsCorrect" msprop:Generator_ColumnVarNameInTable="columnIsCorrect" msprop:Generator_ColumnPropNameInRow="IsCorrect" msprop:Generator_ColumnPropNameInTable="IsCorrectColumn" msprop:Generator_UserColumnName="IsCorrect" type="xs:boolean" default="false" minOccurs="0" />
+              <xs:element name="OrderNo" msprop:Generator_ColumnVarNameInTable="columnOrderNo" msprop:Generator_ColumnPropNameInRow="OrderNo" msprop:Generator_ColumnPropNameInTable="OrderNoColumn" msprop:Generator_UserColumnName="OrderNo" type="xs:unsignedInt" minOccurs="0" />
+              <xs:element name="ContentUA" msprop:Generator_ColumnVarNameInTable="columnContentUA" msprop:Generator_ColumnPropNameInRow="ContentUA" msprop:Generator_ColumnPropNameInTable="ContentUAColumn" msprop:Generator_UserColumnName="ContentUA" type="xs:string" minOccurs="0" />
+              <xs:element name="ContentRU" msprop:Generator_ColumnVarNameInTable="columnContentRU" msprop:Generator_ColumnPropNameInRow="ContentRU" msprop:Generator_ColumnPropNameInTable="ContentRUColumn" msprop:Generator_UserColumnName="ContentRU" type="xs:string" minOccurs="0" />
+              <xs:element name="Selected" msprop:Generator_ColumnVarNameInTable="columnSelected" msprop:Generator_ColumnPropNameInRow="Selected" msprop:Generator_ColumnPropNameInTable="SelectedColumn" msprop:Generator_UserColumnName="Selected" type="xs:boolean" minOccurs="0" />
+              <xs:element name="ImageFileName" msprop:Generator_ColumnVarNameInTable="columnImageFileName" msprop:Generator_ColumnPropNameInRow="ImageFileName" msprop:Generator_ColumnPropNameInTable="ImageFileNameColumn" msprop:Generator_UserColumnName="ImageFileName" type="xs:string" minOccurs="0" />
+              <xs:element name="AnswerID" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnAnswerID" msprop:Generator_ColumnPropNameInRow="AnswerID" msprop:Generator_ColumnPropNameInTable="AnswerIDColumn" msprop:Generator_UserColumnName="AnswerID" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PlacementCorrectAnswers" msprop:Generator_TableClassName="PlacementCorrectAnswersDataTable" msprop:Generator_TableVarName="tablePlacementCorrectAnswers" msprop:Generator_TablePropName="PlacementCorrectAnswers" msprop:Generator_RowDeletingName="PlacementCorrectAnswersRowDeleting" msprop:Generator_UserTableName="PlacementCorrectAnswers" msprop:Generator_RowChangingName="PlacementCorrectAnswersRowChanging" msprop:Generator_RowEvHandlerName="PlacementCorrectAnswersRowChangeEventHandler" msprop:Generator_RowDeletedName="PlacementCorrectAnswersRowDeleted" msprop:Generator_RowEvArgName="PlacementCorrectAnswersRowChangeEvent" msprop:Generator_RowChangedName="PlacementCorrectAnswersRowChanged" msprop:Generator_RowClassName="PlacementCorrectAnswersRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AnswerID" msprop:Generator_ColumnVarNameInTable="columnAnswerID" msprop:Generator_ColumnPropNameInRow="AnswerID" msprop:Generator_ColumnPropNameInTable="AnswerIDColumn" msprop:Generator_UserColumnName="AnswerID" type="xs:int" minOccurs="0" />
+              <xs:element name="ShelfNumber" msprop:Generator_ColumnVarNameInTable="columnShelfNumber" msprop:Generator_ColumnPropNameInRow="ShelfNumber" msprop:Generator_ColumnPropNameInTable="ShelfNumberColumn" msprop:Generator_UserColumnName="ShelfNumber" type="xs:int" />
+              <xs:element name="Position" msprop:Generator_ColumnVarNameInTable="columnPosition" msprop:Generator_ColumnPropNameInRow="Position" msprop:Generator_ColumnPropNameInTable="PositionColumn" msprop:Generator_UserColumnName="Position" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="IssuesKey" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Issues" />
+      <xs:field xpath="mstns:IssueID" />
+    </xs:unique>
+    <xs:unique name="AnswersKey" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Answers" />
+      <xs:field xpath="mstns:AnswerID" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="Issues_Answers" msdata:parent="Issues" msdata:child="Answers" msdata:parentkey="IssueID" msdata:childkey="IssueID" msprop:Generator_UserChildTable="Answers" msprop:Generator_ChildPropName="GetAnswersRows" msprop:Generator_ParentPropName="IssuesRow" msprop:Generator_UserRelationName="Issues_Answers" msprop:Generator_RelationVarName="relationIssues_Answers" msprop:Generator_UserParentTable="Issues" />
+      <msdata:Relationship name="Answers_PlacementCorrectAnswers" msdata:parent="Answers" msdata:child="PlacementCorrectAnswers" msdata:parentkey="AnswerID" msdata:childkey="AnswerID" msprop:Generator_UserChildTable="PlacementCorrectAnswers" msprop:Generator_ChildPropName="GetPlacementCorrectAnswersRows" msprop:Generator_ParentPropName="AnswersRow" msprop:Generator_UserRelationName="Answers_PlacementCorrectAnswers" msprop:Generator_RelationVarName="relationAnswers_PlacementCorrectAnswers" msprop:Generator_UserParentTable="Answers" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>
