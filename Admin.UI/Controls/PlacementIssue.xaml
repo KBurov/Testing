@@ -29,7 +29,7 @@
         </StackPanel>
 
         <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Auto">
-            <Grid MinHeight="300">
+            <Grid>
                 <Grid.RowDefinitions>
                     <Extended:RowDefinitionExtended Height="*" />
                     <Extended:RowDefinitionExtended Height="*" />

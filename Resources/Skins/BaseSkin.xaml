@@ -216,6 +216,7 @@
     </Style>
     <!-- Shelve Panel Style -->
     <Style x:Key="ShelvePanelStyle">
+        <Setter Property="FrameworkElement.MinHeight" Value="60" />
         <Setter Property="Control.BorderBrush" Value="{StaticResource ForegroundBrush}" />
         <Setter Property="Control.BorderThickness" Value="1" />
     </Style>
@@ -639,7 +640,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ListViewItem}">
                     <Border Name="Bd" BorderBrush="Transparent" BorderThickness="1" Margin="0,1,0,1" SnapsToDevicePixels="True">
-                        <Image Stretch="Uniform" Source="{Binding Path=ImageFileName, Converter={StaticResource ImageCacheConverter}}" />
+                        <Image VerticalAlignment="Bottom" Stretch="Uniform" Source="{Binding Path=ImageFileName, Converter={StaticResource ImageCacheConverter}}" />
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsSelected" Value="True">
@@ -659,7 +660,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ListViewItem}">
                     <Border Name="Bd" BorderBrush="Transparent" BorderThickness="1" Margin="0,1,0,1" SnapsToDevicePixels="True">
-                        <Image Stretch="Uniform" Source="{Binding Path=., Converter={StaticResource ImageCacheConverter}}" />
+                        <Image VerticalAlignment="Bottom" Stretch="Uniform" Source="{Binding Path=., Converter={StaticResource ImageCacheConverter}}" />
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsSelected" Value="True">
