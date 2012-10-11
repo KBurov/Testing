@@ -229,11 +229,11 @@
                         <Label Style="{DynamicResource LabelStyle}" Content="{DynamicResource DistributionChannelTitle}" />
                         <Label Style="{DynamicResource LabelStyle}" Content=":   "/>
                         <CheckBox Style="{DynamicResource CheckBoxStyle}" IsChecked="{Binding IsKADitributionChannel}" />
-                        <Label Style="{DynamicResource LabelStyle}" Content="KA  " />
+                        <Label Style="{DynamicResource LabelStyle}" Content="CP  " />
                         <CheckBox Style="{DynamicResource CheckBoxStyle}" IsChecked="{Binding IsOnTradeDitributionChannel}" />
-                        <Label Style="{DynamicResource LabelStyle}" Content="ON-trade  " />
+                        <Label Style="{DynamicResource LabelStyle}" Content="Horeca  " />
                         <CheckBox Style="{DynamicResource CheckBoxStyle}" IsChecked="{Binding IsOffTradeDitributionChannel}" />
-                        <Label Style="{DynamicResource LabelStyle}" Content="OFF-trade" />
+                        <Label Style="{DynamicResource LabelStyle}" Content="MT" />
                     </StackPanel>
                     <!-- Regions -->
                     <StackPanel Grid.Column="2" Grid.Row="2" Orientation="Horizontal">
