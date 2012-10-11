@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Threading;
+
+using Wanderer.Library.Wpf;
 
 namespace Testing.UI.Pages
 {
@@ -24,6 +27,15 @@ namespace Testing.UI.Pages
         private void MaximizeRestoreButtonClick(object sender, RoutedEventArgs e)
         {
             AppController.MaximizeRestore();
+
+            var placementScrollViewer = UIHelper.FindChild<ScrollViewer>(Application.Current.MainWindow, AppController.PlacementScrollViewerName);
+
+            if (placementScrollViewer == null) return;
+
+            placementScrollViewer.VerticalScrollBarVisibility = Application.Current.MainWindow.WindowState ==
+                                                                WindowState.Normal
+                                                                    ? ScrollBarVisibility.Auto
+                                                                    : ScrollBarVisibility.Disabled;
         }
 
         private void MinimizeButtonClick(object sender, RoutedEventArgs e)

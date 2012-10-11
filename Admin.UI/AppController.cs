@@ -14,6 +14,8 @@ namespace Testing.Admin.UI
 {
     internal static class AppController
     {
+        public const string PlacementScrollViewerName = "_placementScrollViewer";
+
         private static readonly IDictionary<InterfaceLanguages, Uri> _languageUri = new Dictionary<InterfaceLanguages, Uri>
                                                                                         {
                                                                                             {

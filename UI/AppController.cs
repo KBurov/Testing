@@ -19,6 +19,8 @@ namespace Testing.UI
 {
     internal static class AppController
     {
+        public const string PlacementScrollViewerName = "_placementScrollViewer";
+
         private const string ResultTemplate = "<Row ss:AutoFitHeight=\"0\"><Cell><Data ss:Type=\"String\">{0}</Data></Cell><Cell><Data ss:Type=\"String\">{1}</Data></Cell><Cell><Data ss:Type=\"String\">{2}</Data></Cell><Cell><Data ss:Type=\"String\">{3}</Data></Cell><Cell><Data ss:Type=\"String\">{4}</Data></Cell><Cell><Data ss:Type=\"String\">{5}</Data></Cell></Row>";
 
         private static readonly IDictionary<InterfaceLanguages, Uri> _languageUri = new Dictionary<InterfaceLanguages, Uri>

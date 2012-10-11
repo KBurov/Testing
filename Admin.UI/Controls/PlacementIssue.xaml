@@ -28,7 +28,7 @@
             <ComboBox ItemsSource="{Binding AvaliablePlaces}" SelectedValue="{Binding PlacesOnShelf}" Height="20" Width="120" />
         </StackPanel>
 
-        <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Auto">
+        <ScrollViewer Grid.Row="2" Name="_placementScrollViewer" VerticalScrollBarVisibility="Auto">
             <Grid>
                 <Grid.RowDefinitions>
                     <Extended:RowDefinitionExtended Height="*" />

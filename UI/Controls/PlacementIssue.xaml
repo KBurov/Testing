@@ -9,7 +9,7 @@
              d:DesignHeight="300" d:DesignWidth="300">
 
     <Grid>
-        <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <ScrollViewer Name="_placementScrollViewer" VerticalScrollBarVisibility="Auto">
             <Grid MinHeight="300">
                 <Grid.RowDefinitions>
                     <Extended:RowDefinitionExtended Height="*" />
