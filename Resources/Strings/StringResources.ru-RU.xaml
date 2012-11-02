@@ -44,6 +44,8 @@
     <System:String x:Key="AnswerPointsTitle">Количество возможных баллов</System:String>
     <System:String x:Key="YesTitle">Да</System:String>
     <System:String x:Key="NoTitle">Нет</System:String>
+    <System:String x:Key="ResultPointsTitle">Сумма набраных баллов</System:String>
+    <System:String x:Key="AveragePointTitle">Средний балл</System:String>
     <!-- Button Titles -->
     <System:String x:Key="EditButtonTitle">Редактировать</System:String>
     <System:String x:Key="SettingsButtonTitle">Настройки</System:String>

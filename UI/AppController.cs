@@ -173,6 +173,8 @@ namespace Testing.UI
             using (var sw = new StreamWriter(Path.Combine(Settings.Default.ResultsFolder, fullName + ".xml")))
 // ReSharper restore AssignNullToNotNullAttribute
             {
+                var resultPoints = UserInfo.CorrectAnswerPoints.Values.Sum(p => p);
+
                 sw.Write(string.Format(
                     template,
                     Application.Current.FindResource("LastNameTitle"),
@@ -182,11 +184,15 @@ namespace Testing.UI
                     Application.Current.FindResource("PositionTitle"),
                     Application.Current.FindResource("LevelTitle"),
                     Application.Current.FindResource("ExperienceTitle"),
+                    Application.Current.FindResource("ResultPointsTitle"),
+                    Application.Current.FindResource("AveragePointTitle"),
                     UserInfo.LastName, UserInfo.FirstName, UserInfo.MiddleName, fullName,
                     DateTime.Today.ToString("s"),
                     Issues.IssueDb.UserInfoSettings.IsPositionVisible ? UserInfo.Position : "-",
                     Issues.IssueDb.UserInfoSettings.IsLevelVisible ? UserInfo.Level : "-",
                     Issues.IssueDb.UserInfoSettings.IsExperienceVisible ? UserInfo.Experience : "-",
+                    resultPoints,
+                    resultPoints / Issues.IssueDb.GetIssueNumber(UserInfo.DistributionChannel, UserInfo.Region),
                     Application.Current.FindResource("ResultPageTitle"),
                     Application.Current.FindResource("SetTitle"),
                     Application.Current.FindResource("IssueTitle"),
