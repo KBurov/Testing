@@ -281,6 +281,8 @@ namespace Testing.Admin.UI.ViewModels
 
         public ObservableCollection<VisualAnswer> Answers { get; private set; }
 
+        public int AnswersCount { get { return MaxImageCount; } }
+
         public bool IsIssueAdditionalDetailsVisible { get { return IssueType == IssueTypes.SelectionInImage || IssueType == IssueTypes.Placement; } }
 
         public int DetailsColumnSpan { get { return IsIssueAdditionalDetailsVisible ? 1 : 3; } }

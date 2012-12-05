@@ -22,7 +22,7 @@
                                     <RowDefinition Height="Auto" />
                                 </Grid.RowDefinitions>
 
-                                <Image HorizontalAlignment="Center" Stretch="Uniform" Source="{Binding Path=ImageFileName, Converter={StaticResource ImageCacheConverter}}" />
+                                <Image HorizontalAlignment="Center" VerticalAlignment="Bottom" Stretch="Uniform" Source="{Binding Path=ImageFileName, Converter={StaticResource ImageCacheConverter}}" />
                                 <CheckBox Grid.Row="1" Style="{DynamicResource CheckBoxStyle}" Margin="0" Padding="0" HorizontalAlignment="Center" IsChecked="{Binding Path=Selected}" />
                             </Grid>
                         </Border>

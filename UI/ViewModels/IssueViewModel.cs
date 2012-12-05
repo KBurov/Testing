@@ -58,6 +58,8 @@ namespace Testing.UI.ViewModels
                     foreach (var a in CurrentIssue.Answers)
                         Answers.Add(new VisualAnswer(a, _currentDirectory));
 
+                    RaisePropertyChanged("AnswersCount");
+
                     if (IssueType != IssueTypes.Placement) return;
 
                     RaisePropertyChanged("PlacesOnShelf");
@@ -125,6 +127,8 @@ namespace Testing.UI.ViewModels
         public IssueTypes IssueType { get { return IsIssueSelected ? CurrentIssue.Type : IssueTypes.Selection; } }
 
         public ObservableCollection<VisualAnswer> Answers { get; private set; }
+
+        public int AnswersCount { get { return Answers != null ? Answers.Count : 0; } }
 
         public bool IsIssueAdditionalDetailsVisible { get { return IssueType == IssueTypes.SelectionInImage || IssueType == IssueTypes.Placement; } }
 

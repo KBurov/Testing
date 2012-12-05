@@ -1,8 +1,8 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:CommandBehaviors="clr-namespace:AttachedCommandBehavior;assembly=AttachedCommandBehavior"
-                    xmlns:Converters="clr-namespace:Testing.Common.Converters;assembly=Testing.Common">
-    <Converters:ImageCacheConverter x:Key="ImageCacheConverter" />
+                    xmlns:commandBehaviors="clr-namespace:AttachedCommandBehavior;assembly=AttachedCommandBehavior"
+                    xmlns:converters="clr-namespace:Testing.Common.Converters;assembly=Testing.Common">
+    <converters:ImageCacheConverter x:Key="ImageCacheConverter" />
     <!-- Colors & Brushes -->
     <Color x:Key="FocusEffectColor">SkyBlue</Color>
     
@@ -607,7 +607,7 @@
         <Setter Property="ItemsControl.ItemsPanel">
             <Setter.Value>
                 <ItemsPanelTemplate>
-                    <UniformGrid Columns="30" Rows="1" />
+                    <UniformGrid Columns="{Binding AnswersCount, Mode=OneWay}" Rows="1" />
                 </ItemsPanelTemplate>
             </Setter.Value>
         </Setter>
@@ -671,8 +671,8 @@
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
-        <Setter Property="CommandBehaviors:CommandBehavior.Event" Value="MouseDoubleClick" />
-        <Setter Property="CommandBehaviors:CommandBehavior.Command" Value="{Binding DataContext.DeletePlacementCorrectAnswerCommand, RelativeSource={RelativeSource AncestorType={x:Type ListView}}}" />
-        <Setter Property="CommandBehaviors:CommandBehavior.CommandParameter" Value="{Binding RelativeSource={RelativeSource AncestorType={x:Type ListView}}}" />
+        <Setter Property="commandBehaviors:CommandBehavior.Event" Value="MouseDoubleClick" />
+        <Setter Property="commandBehaviors:CommandBehavior.Command" Value="{Binding DataContext.DeletePlacementCorrectAnswerCommand, RelativeSource={RelativeSource AncestorType={x:Type ListView}}}" />
+        <Setter Property="commandBehaviors:CommandBehavior.CommandParameter" Value="{Binding RelativeSource={RelativeSource AncestorType={x:Type ListView}}}" />
     </Style>
 </ResourceDictionary>
