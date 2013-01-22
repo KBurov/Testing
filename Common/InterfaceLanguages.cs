@@ -4,7 +4,7 @@ namespace Testing.Common
 {
     public enum InterfaceLanguages
     {
-        [Description("Український")]
+        [Description("Українська")]
         Ukraine,
         [Description("Русский")]
         Russian
