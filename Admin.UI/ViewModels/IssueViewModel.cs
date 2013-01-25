@@ -196,7 +196,7 @@ namespace Testing.Admin.UI.ViewModels
                 if (value)
                     issue.Region |= Regions.EastUkraine;
                 else
-                    issue.Region |= Regions.EastUkraine;
+                    issue.Region ^= Regions.EastUkraine;
 
                 RaisePropertyChanged("IsEastUkraine");
             }
