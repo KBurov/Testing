@@ -977,6 +977,23 @@ namespace Testing.Admin.UI.ViewModels
             RaisePropertyChanged("CorrectAnswerPoints");
             RaisePropertyChanged("IsIssueAdditionalDetailsVisible");
             RaisePropertyChanged("DetailsColumnSpan");
+            // Selection in image issue
+            RaisePropertyChanged("CorrectAnswer");
+            RaisePropertyChanged("ImageFileName");
+            // Order issue
+            RaisePropertyChanged("SelectedAnswerIndex");
+            // Placement issue
+            RaisePropertyChanged("IsThirdShelveVisible");
+            RaisePropertyChanged("IsFourthShelveVisible");
+            RaisePropertyChanged("IsFifthShelveVisible");
+
+            RaisePropertyChanged("PlacesOnShelf");
+
+            RaisePropertyChanged("IsTwoShelves");
+            RaisePropertyChanged("IsTwoShelves");
+            RaisePropertyChanged("IsThreeShelves");
+            RaisePropertyChanged("IsFourShelves");
+            RaisePropertyChanged("IsFiveShelves");
         }
     }
 }
